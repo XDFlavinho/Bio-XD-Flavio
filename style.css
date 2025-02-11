@@ -10,7 +10,7 @@ body, html {
 
 /* Fundo da página */
 body {
-    background-image: url(Samurai.jpg);
+    background-image: url(blueocean.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -79,7 +79,7 @@ body {
 .social-facebook,
 .social-tiktok,
 .social-livepix,
-.social-X {
+.social-youtube {
     display: flex;
     align-items: center;
     gap: 10px;
@@ -111,19 +111,19 @@ body {
 
 /* Estilos específicos para cada botão */
 .social-facebook .botao {
-    background: linear-gradient(45deg, #000000, #26397a, #143391);
+    background: linear-gradient(45deg, #000000,#242e5a, #314eac, #152a68);
 }
 
 .social-tiktok .botao {
-    background: linear-gradient(45deg, #000000, #ff0050, #ff0000);
+    background: linear-gradient(45deg, #000000, #ff0050, #ff0000, #000000);
 }
 
 .social-livepix .botao {
-    background: linear-gradient(45deg, #004d4d, #008080, #006666, #00524e);
+    background: linear-gradient(45deg, #004d4d, #39749b, #006666, #00524e, #39749b);
 }
 
-.social-X .botao {
-    background: linear-gradient(45deg, #000000, #555555, #000000, #000000);
+.social-youtube .botao {
+    background: linear-gradient(45deg, #FF0000, #d36060, #c41a1a, #B31217, #fd3939);
 }
 
 /* Responsividade para telas menores */
