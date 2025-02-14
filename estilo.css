@@ -1,0 +1,151 @@
+@font-face {
+  font-family: 'FonteEdson'; /* Nome da fonte sem extensão */
+  src: url('FonteEdson.ttf') format('woff2'), /* Formato moderno */
+       url('FonteEdson.ttf') format('truetype'); /* Formato alternativo */
+  font-weight: normal; /* Peso da fonte */
+  font-style: normal;  /* Estilo da fonte */
+}
+
+/* Reset básico */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Estilo do vídeo de fundo */
+body {
+  font-family: 'FonteEdson', Arial, sans-serif; /* Fonte personalizada */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  flex-direction: column; /* Coloca os elementos em coluna */
+  text-align: center; /* Centraliza o texto */
+  background: #ff0000; /* Cor de fundo de backup */
+}
+
+/* Estilo padrão do vídeo */
+video#background-video {
+  position: fixed; /* Fixa o vídeo na tela */
+  top: 50%; /* Centraliza verticalmente */
+  left: 50%; /* Centraliza horizontalmente */
+  min-width: 100%; /* Garante que o vídeo cubra a largura da tela */
+  min-height: 100%; /* Garante que o vídeo cubra a altura da tela */
+  width: auto; /* Mantém a proporção original */
+  height: auto; /* Mantém a proporção original */
+  z-index: -1; /* Envia o vídeo para trás de outros elementos */
+  transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+  object-fit: cover; /* Garante que o vídeo preencha a tela sem distorções */
+}
+
+/* Para telas verticais (celulares) */
+@media screen and (max-aspect-ratio: 9/16) {
+  video#background-video {
+    content: url("video-vertical.mp4"); /* Carrega o vídeo vertical */
+  }
+}
+
+/* Para telas horizontais (PCs) */
+@media screen and (min-aspect-ratio: 16/9) {
+  video#background-video {
+    content: url("video-horizontal.mp4"); /* Carrega o vídeo horizontal */
+  }
+}
+
+.Foto {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Cria um círculo perfeito */
+  z-index: 1; /* Garante que fique acima do vídeo */
+  position: relative; /* Permite adicionar efeitos */
+  border: 2px solid transparent; /* Espaço para o efeito */
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); /* Brilho externo mais suave */
+}
+
+/* Estilo do nome do autor */
+.NomeAutor {
+  font-size: 25px; /* Tamanho do texto */
+  z-index: 1; /* Garante que fique acima do vídeo */
+  position: relative; /* Mantém no fluxo normal */
+  margin-bottom: 30px; /* Espaçamento entre a foto e o nome */
+  font-weight: bold;
+  color: #fff; /* Cor do texto */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para melhorar a legibilidade */
+}
+
+.fundo {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 47%; /* Corrigido para centralizar */
+  left: 50%; /* Corrigido para centralizar */
+  transform: translate(-50%, -50%); /* Centraliza perfeitamente */
+  width: 70%;
+  height: 60%;
+  z-index: 0;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 255, 255);
+}
+
+/* Contêiner para os botões sociais */
+.social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Estilo dos contêineres de redes sociais */
+.social-instagram,
+.social-facebook,
+.social-tiktok,
+.social-livepix,
+.social-youtube {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Estilo dos logos */
+.logo {
+  width: 40px;
+  margin-bottom: 32px;
+  border-radius: 50%; /* Cria um círculo perfeito */
+}
+
+/* Estilo dos botões */
+.botao {
+  background: linear-gradient(135deg, #833AB4, #C13584, #FD1D1D, #F77737, #FCAF45);
+  color: #fff;
+  width: 150px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.8s;
+  margin-bottom: 35px;
+}
+
+.botao:hover {
+  opacity: 0.8;
+}
+
+/* Estilos específicos para cada botão */
+.social-facebook .botao {
+  background: linear-gradient(135deg, #0042c5, #5992f5, #5279f7, #0055ff);
+}
+
+.social-tiktok .botao {
+  background: linear-gradient(135deg, #000000, #FF0050, #FF0050, #000000);
+}
+
+.social-livepix .botao {
+  background: linear-gradient(135deg, #004d4d, #39749b, #00cccc, #004d4d);
+}
+
+.social-youtube .botao {
+  background: linear-gradient(135deg, #FF0000, #FF4D4D, #FF0000, #E60000);
+}
